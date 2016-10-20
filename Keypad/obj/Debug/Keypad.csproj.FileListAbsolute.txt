@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\bin\Debug\Keypad.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\bin\Debug\Keypad.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.RegisterKeypad.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.csprojResolveAssemblyReference.cache
