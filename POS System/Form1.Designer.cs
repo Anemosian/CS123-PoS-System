@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.registerKeypad1 = new Keypad.RegisterKeypad();
             this.SuspendLayout();
+            // 
+            // registerKeypad1
+            // 
+            this.registerKeypad1.Location = new System.Drawing.Point(0, -1);
+            this.registerKeypad1.Name = "registerKeypad1";
+            this.registerKeypad1.Size = new System.Drawing.Size(832, 502);
+            this.registerKeypad1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 579);
+            this.ClientSize = new System.Drawing.Size(836, 514);
+            this.Controls.Add(this.registerKeypad1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,6 +51,8 @@
         }
 
         #endregion
+
+        private Keypad.RegisterKeypad registerKeypad1;
     }
 }
 
