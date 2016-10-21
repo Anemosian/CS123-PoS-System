@@ -45,19 +45,15 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.promobtn = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
-            this.undo = new System.Windows.Forms.Button();
             this.confirm = new System.Windows.Forms.Button();
-            this.order = new System.Windows.Forms.Button();
-            this.stock = new System.Windows.Forms.Button();
-            this.sales = new System.Windows.Forms.Button();
-            this.editor = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.undo = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(62, 26);
+            this.button1.Location = new System.Drawing.Point(24, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 80);
             this.button1.TabIndex = 0;
@@ -67,7 +63,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(168, 26);
+            this.button2.Location = new System.Drawing.Point(130, 20);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 80);
             this.button2.TabIndex = 1;
@@ -77,7 +73,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(274, 26);
+            this.button3.Location = new System.Drawing.Point(236, 20);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 80);
             this.button3.TabIndex = 2;
@@ -87,7 +83,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(380, 26);
+            this.button4.Location = new System.Drawing.Point(342, 20);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 80);
             this.button4.TabIndex = 5;
@@ -97,7 +93,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(62, 112);
+            this.button5.Location = new System.Drawing.Point(24, 106);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 80);
             this.button5.TabIndex = 4;
@@ -107,7 +103,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(168, 112);
+            this.button6.Location = new System.Drawing.Point(130, 106);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 80);
             this.button6.TabIndex = 3;
@@ -117,7 +113,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(274, 109);
+            this.button7.Location = new System.Drawing.Point(236, 103);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 80);
             this.button7.TabIndex = 8;
@@ -127,7 +123,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(380, 112);
+            this.button8.Location = new System.Drawing.Point(342, 106);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(100, 80);
             this.button8.TabIndex = 7;
@@ -137,7 +133,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(62, 198);
+            this.button9.Location = new System.Drawing.Point(24, 192);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 80);
             this.button9.TabIndex = 6;
@@ -147,7 +143,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(168, 198);
+            this.button10.Location = new System.Drawing.Point(130, 192);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(100, 80);
             this.button10.TabIndex = 11;
@@ -157,7 +153,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(274, 198);
+            this.button11.Location = new System.Drawing.Point(236, 192);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(100, 80);
             this.button11.TabIndex = 10;
@@ -167,7 +163,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(380, 198);
+            this.button12.Location = new System.Drawing.Point(342, 192);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(100, 80);
             this.button12.TabIndex = 9;
@@ -177,7 +173,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(62, 284);
+            this.button13.Location = new System.Drawing.Point(24, 278);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(100, 80);
             this.button13.TabIndex = 15;
@@ -187,7 +183,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(168, 284);
+            this.button14.Location = new System.Drawing.Point(130, 278);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(100, 80);
             this.button14.TabIndex = 14;
@@ -197,7 +193,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(274, 284);
+            this.button15.Location = new System.Drawing.Point(236, 278);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(100, 80);
             this.button15.TabIndex = 13;
@@ -208,7 +204,7 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(380, 284);
+            this.button16.Location = new System.Drawing.Point(342, 278);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(100, 80);
             this.button16.TabIndex = 12;
@@ -218,7 +214,7 @@
             // 
             // promobtn
             // 
-            this.promobtn.Location = new System.Drawing.Point(62, 400);
+            this.promobtn.Location = new System.Drawing.Point(24, 421);
             this.promobtn.Name = "promobtn";
             this.promobtn.Size = new System.Drawing.Size(131, 89);
             this.promobtn.TabIndex = 16;
@@ -226,29 +222,9 @@
             this.promobtn.UseVisualStyleBackColor = true;
             this.promobtn.Click += new System.EventHandler(this.promobtn_Click);
             // 
-            // cancel
-            // 
-            this.cancel.Location = new System.Drawing.Point(375, 400);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(143, 89);
-            this.cancel.TabIndex = 17;
-            this.cancel.Text = "CANCEL";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
-            // undo
-            // 
-            this.undo.Location = new System.Drawing.Point(529, 400);
-            this.undo.Name = "undo";
-            this.undo.Size = new System.Drawing.Size(143, 89);
-            this.undo.TabIndex = 18;
-            this.undo.Text = "UNDO";
-            this.undo.UseVisualStyleBackColor = true;
-            this.undo.Click += new System.EventHandler(this.undo_Click);
-            // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(683, 400);
+            this.confirm.Location = new System.Drawing.Point(645, 421);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(143, 89);
             this.confirm.TabIndex = 19;
@@ -256,55 +232,30 @@
             this.confirm.UseVisualStyleBackColor = true;
             this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
-            // order
+            // undo
             // 
-            this.order.Location = new System.Drawing.Point(-1, -1);
-            this.order.Name = "order";
-            this.order.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.order.Size = new System.Drawing.Size(36, 101);
-            this.order.TabIndex = 20;
-            this.order.Text = "ORDER";
-            this.order.UseVisualStyleBackColor = true;
-            this.order.Click += new System.EventHandler(this.order_Click);
+            this.undo.Location = new System.Drawing.Point(491, 421);
+            this.undo.Name = "undo";
+            this.undo.Size = new System.Drawing.Size(143, 89);
+            this.undo.TabIndex = 18;
+            this.undo.Text = "UNDO";
+            this.undo.UseVisualStyleBackColor = true;
+            this.undo.Click += new System.EventHandler(this.undo_Click);
             // 
-            // stock
+            // cancel
             // 
-            this.stock.Location = new System.Drawing.Point(-1, 99);
-            this.stock.Name = "stock";
-            this.stock.Size = new System.Drawing.Size(36, 101);
-            this.stock.TabIndex = 21;
-            this.stock.Text = "button22";
-            this.stock.UseVisualStyleBackColor = true;
-            this.stock.Click += new System.EventHandler(this.stock_Click);
-            // 
-            // sales
-            // 
-            this.sales.Location = new System.Drawing.Point(-1, 199);
-            this.sales.Name = "sales";
-            this.sales.Size = new System.Drawing.Size(36, 101);
-            this.sales.TabIndex = 22;
-            this.sales.Text = "button23";
-            this.sales.UseVisualStyleBackColor = true;
-            this.sales.Click += new System.EventHandler(this.sales_Click);
-            // 
-            // editor
-            // 
-            this.editor.Location = new System.Drawing.Point(-1, 299);
-            this.editor.Name = "editor";
-            this.editor.Size = new System.Drawing.Size(36, 101);
-            this.editor.TabIndex = 23;
-            this.editor.Text = "button24";
-            this.editor.UseVisualStyleBackColor = true;
-            this.editor.Click += new System.EventHandler(this.editor_Click);
+            this.cancel.Location = new System.Drawing.Point(337, 421);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(143, 89);
+            this.cancel.TabIndex = 17;
+            this.cancel.Text = "CANCEL";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // RegisterKeypad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.editor);
-            this.Controls.Add(this.sales);
-            this.Controls.Add(this.stock);
-            this.Controls.Add(this.order);
             this.Controls.Add(this.confirm);
             this.Controls.Add(this.undo);
             this.Controls.Add(this.cancel);
@@ -326,7 +277,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "RegisterKeypad";
-            this.Size = new System.Drawing.Size(858, 515);
+            this.Size = new System.Drawing.Size(820, 520);
             this.Load += new System.EventHandler(this.RegisterKeypad_Load);
             this.ResumeLayout(false);
 
@@ -351,13 +302,9 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button promobtn;
-        private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button undo;
         private System.Windows.Forms.Button confirm;
-        private System.Windows.Forms.Button order;
-        private System.Windows.Forms.Button stock;
-        private System.Windows.Forms.Button sales;
-        private System.Windows.Forms.Button editor;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button undo;
+        private System.Windows.Forms.Button cancel;
     }
 }

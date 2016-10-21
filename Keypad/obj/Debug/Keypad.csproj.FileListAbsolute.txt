@@ -5,3 +5,4 @@ C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\
 C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.dll
 C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.pdb
 C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\POS System\CS123-PoS-System\Keypad\obj\Debug\Keypad.Editor.resources
