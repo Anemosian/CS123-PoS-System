@@ -12,9 +12,12 @@ namespace POS_System
 {
     public partial class Form1 : Form
     {
+        private BindingList<Product> products = new BindingList<Product>();
         public Form1()
         {
             InitializeComponent();
+            listProducts.DataSource = products;
+            listProducts.DisplayMember = "Description";
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace POS_System
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

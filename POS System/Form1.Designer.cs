@@ -33,19 +33,20 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.stocktab = new System.Windows.Forms.TabPage();
-            this.registerKeypad1 = new Keypad.RegisterKeypad();
             this.ordertab = new System.Windows.Forms.TabPage();
+            this.listProducts = new System.Windows.Forms.ListBox();
+            this.registerKeypad1 = new Keypad.RegisterKeypad();
+            this.stocktab = new System.Windows.Forms.TabPage();
             this.salestab = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.editortab = new System.Windows.Forms.TabPage();
             this.editor1 = new Keypad.Editor();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1.SuspendLayout();
             this.ordertab.SuspendLayout();
             this.salestab.SuspendLayout();
-            this.editortab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.editortab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -61,6 +62,36 @@
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // ordertab
+            // 
+            this.ordertab.Controls.Add(this.listProducts);
+            this.ordertab.Controls.Add(this.registerKeypad1);
+            this.ordertab.Location = new System.Drawing.Point(4, 22);
+            this.ordertab.Name = "ordertab";
+            this.ordertab.Padding = new System.Windows.Forms.Padding(3);
+            this.ordertab.Size = new System.Drawing.Size(828, 562);
+            this.ordertab.TabIndex = 0;
+            this.ordertab.Text = "ORDER";
+            this.ordertab.UseVisualStyleBackColor = true;
+            this.ordertab.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // listProducts
+            // 
+            this.listProducts.FormattingEnabled = true;
+            this.listProducts.Location = new System.Drawing.Point(480, 64);
+            this.listProducts.Name = "listProducts";
+            this.listProducts.Size = new System.Drawing.Size(335, 368);
+            this.listProducts.TabIndex = 2;
+            this.listProducts.SelectedIndexChanged += new System.EventHandler(this.listProducts_SelectedIndexChanged);
+            // 
+            // registerKeypad1
+            // 
+            this.registerKeypad1.Location = new System.Drawing.Point(10, 43);
+            this.registerKeypad1.Name = "registerKeypad1";
+            this.registerKeypad1.Size = new System.Drawing.Size(805, 521);
+            this.registerKeypad1.TabIndex = 1;
+            this.registerKeypad1.Load += new System.EventHandler(this.registerKeypad1_Load);
+            // 
             // stocktab
             // 
             this.stocktab.Location = new System.Drawing.Point(4, 22);
@@ -72,26 +103,6 @@
             this.stocktab.UseVisualStyleBackColor = true;
             this.stocktab.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // registerKeypad1
-            // 
-            this.registerKeypad1.Location = new System.Drawing.Point(10, 43);
-            this.registerKeypad1.Name = "registerKeypad1";
-            this.registerKeypad1.Size = new System.Drawing.Size(805, 521);
-            this.registerKeypad1.TabIndex = 1;
-            this.registerKeypad1.Load += new System.EventHandler(this.registerKeypad1_Load);
-            // 
-            // ordertab
-            // 
-            this.ordertab.Controls.Add(this.registerKeypad1);
-            this.ordertab.Location = new System.Drawing.Point(4, 22);
-            this.ordertab.Name = "ordertab";
-            this.ordertab.Padding = new System.Windows.Forms.Padding(3);
-            this.ordertab.Size = new System.Drawing.Size(828, 562);
-            this.ordertab.TabIndex = 0;
-            this.ordertab.Text = "ORDER";
-            this.ordertab.UseVisualStyleBackColor = true;
-            this.ordertab.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
             // salestab
             // 
             this.salestab.Controls.Add(this.chart1);
@@ -102,6 +113,22 @@
             this.salestab.TabIndex = 2;
             this.salestab.Text = "SALES";
             this.salestab.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(30, 30);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(407, 376);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // editortab
             // 
@@ -121,25 +148,10 @@
             this.editor1.Size = new System.Drawing.Size(820, 520);
             this.editor1.TabIndex = 2;
             // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(30, 30);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(407, 376);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -152,8 +164,8 @@
             this.tabControl1.ResumeLayout(false);
             this.ordertab.ResumeLayout(false);
             this.salestab.ResumeLayout(false);
-            this.editortab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.editortab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -169,6 +181,7 @@
         private Keypad.Editor editor1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ListBox listProducts;
     }
 }
 

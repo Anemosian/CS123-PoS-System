@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="POSDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="POSDatabaseModelStoreContainer">
+    <EntitySet Name="Products" EntityType="POSDatabaseModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sales_tracker" EntityType="POSDatabaseModel.Store.sales_tracker" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Productsales_tracker" EntityType="POSDatabaseModel.Store.Productsales_tracker" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Productsales_tracker_Product" Association="POSDatabaseModel.Store.FK_Productsales_tracker_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Productsales_tracker" EntitySet="Productsales_tracker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productsales_tracker_sales_tracker" Association="POSDatabaseModel.Store.FK_Productsales_tracker_sales_tracker">
+      <End Role="sales_tracker" EntitySet="sales_tracker" />
+      <End Role="Productsales_tracker" EntitySet="Productsales_tracker" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sales_tracker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" />
+    <Property Name="Date_Sold" Type="datetime" Nullable="false" />
+    <Property Name="Quantity_Sold" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Productsales_tracker">
+    <Key>
+      <PropertyRef Name="Products_Id" />
+      <PropertyRef Name="sales_tracker_Id" />
+    </Key>
+    <Property Name="Products_Id" Type="int" Nullable="false" />
+    <Property Name="sales_tracker_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Productsales_tracker_Product">
+    <End Role="Product" Type="POSDatabaseModel.Store.Products" Multiplicity="1" />
+    <End Role="Productsales_tracker" Type="POSDatabaseModel.Store.Productsales_tracker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Productsales_tracker">
+        <PropertyRef Name="Products_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productsales_tracker_sales_tracker">
+    <End Role="Productsales_tracker" Type="POSDatabaseModel.Store.Productsales_tracker" Multiplicity="*" />
+    <End Role="sales_tracker" Type="POSDatabaseModel.Store.sales_tracker" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="sales_tracker">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Productsales_tracker">
+        <PropertyRef Name="sales_tracker_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="POSDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PoSDatabaseEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Products" EntityType="POSDatabaseModel.Product" />
+          <EntitySet Name="sales_tracker" EntityType="POSDatabaseModel.sales_tracker" />
+          <AssociationSet Name="Productsales_tracker" Association="POSDatabaseModel.Productsales_tracker">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="sales_tracker" EntitySet="sales_tracker" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="POSDatabaseModel.Order" />
+          <AssociationSet Name="ProductOrder" Association="POSDatabaseModel.ProductOrder">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <NavigationProperty Name="sales_tracker" Relationship="POSDatabaseModel.Productsales_tracker" FromRole="Product" ToRole="sales_tracker" />
+          <NavigationProperty Name="Orders" Relationship="POSDatabaseModel.ProductOrder" FromRole="Product" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="sales_tracker">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" a:SetterAccess="Public" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+          <Property Name="Price" Type="Decimal" Nullable="false" />
+          <Property Name="Date_Sold" Type="DateTime" Nullable="false" />
+          <Property Name="Quantity_Sold" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="POSDatabaseModel.Productsales_tracker" FromRole="sales_tracker" ToRole="Product" />
+        </EntityType>
+        <Association Name="Productsales_tracker">
+          <End Type="POSDatabaseModel.Product" Role="Product" Multiplicity="*" />
+          <End Type="POSDatabaseModel.sales_tracker" Role="sales_tracker" Multiplicity="*" >
+          </End>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Products" Relationship="POSDatabaseModel.ProductOrder" FromRole="Order" ToRole="Product" />
+        </EntityType>
+        <Association Name="ProductOrder">
+          <End Type="POSDatabaseModel.Product" Role="Product" Multiplicity="*" />
+          <End Type="POSDatabaseModel.Order" Role="Order" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="POSDatabaseModelStoreContainer" CdmEntityContainer="PoSDatabaseEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="IsTypeOf(POSDatabaseModel.Product)">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sales_tracker">
+      <EntityTypeMapping TypeName="IsTypeOf(POSDatabaseModel.sales_tracker)">
+        <MappingFragment StoreEntitySet="sales_tracker">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Sold" ColumnName="Date_Sold" />
+          <ScalarProperty Name="Quantity_Sold" ColumnName="Quantity_Sold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Productsales_tracker" TypeName="POSDatabaseModel.Productsales_tracker" StoreEntitySet="Productsales_tracker">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Products_Id" />
+      </EndProperty>
+      <EndProperty Name="sales_tracker">
+        <ScalarProperty Name="Id" ColumnName="sales_tracker_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
